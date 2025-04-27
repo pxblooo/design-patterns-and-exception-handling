@@ -1,5 +1,3 @@
-// ecommerce.cpp
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -10,7 +8,7 @@
 #include <limits>
 using namespace std;
 
-// Product Class
+
 class Product {
 private:
     int id;
@@ -29,7 +27,7 @@ public:
     }
 };
 
-// CartItem Class
+
 class CartItem {
 private:
     Product product;
@@ -51,7 +49,7 @@ public:
     }
 };
 
-// Payment Strategy Interface
+
 class PaymentStrategy {
 public:
     virtual ~PaymentStrategy() {}
@@ -84,7 +82,7 @@ public:
     string getMethod() const override { return "GCash"; }
 };
 
-// Singleton Logger
+
 class OrderLogger {
 private:
     static OrderLogger* instance;
@@ -118,7 +116,7 @@ public:
 };
 OrderLogger* OrderLogger::instance = nullptr;
 
-// ShoppingCart Class
+
 const int MAX_CART_ITEMS = 10;
 class ShoppingCart {
 private:
@@ -176,7 +174,7 @@ public:
     }
 };
 
-// Order Class
+
 const int MAX_ORDERS = 10;
 class Order {
 private:
@@ -213,7 +211,7 @@ public:
 };
 int Order::nextId = 1;
 
-// ECommerceSystem Class
+
 const int MAX_PRODUCTS = 10;
 class ECommerceSystem {
 private:
@@ -234,9 +232,9 @@ public:
     void run();
 };
 
-// Method implementations for ECommerceSystem
 
-// Main Function
+
+
 int main() {
     ECommerceSystem system;
     system.run();
